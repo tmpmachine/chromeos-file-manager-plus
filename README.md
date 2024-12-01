@@ -10,6 +10,7 @@ Enable the following flag:
 Extensions on chrome:// URLs
 chrome://flags/#extensions-on-chrome-urls
 ```
+WARNING: This is considered a "bad" flag.
 
 ## Installation
 1. Download and extract this repository.
