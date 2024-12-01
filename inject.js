@@ -4,6 +4,13 @@
   function handleChange(evt) {
     let {key, shiftKey, altKey, ctrlKey} = evt;
 
+    if (!ctrlKey && !shiftKey) {
+      if (altKey && key === '.') {
+        openCurrentDirInTerminal_();
+        return;
+      }
+    }
+
     if (shiftKey || altKey || ctrlKey || isInputableElement()) return;
 
     const regex = /^[a-zA-Z0-9]$/;
@@ -20,6 +27,28 @@
     evt.preventDefault()
     
     setNextSelection(nextItem.index)
+  }
+
+  async function openCurrentDirInTerminal_() {
+    let tc = fileManager.taskController;
+    let tasks = await tc.getEntryFileTasks(fileManager.directoryModel_.getCurrentDirEntry())
+    tasks.execute({
+        descriptor: fileManager.ui_.defaultTaskMenuItem.descriptor,
+        title: fileManager.ui_.defaultTaskMenuItem.label,
+        get iconUrl() {
+            console.assert(false);
+            return ""
+        },
+        get isDefault() {
+            console.assert(false);
+            return false
+        },
+        get isGenericFileHandler() {
+            console.assert(false);
+            return false
+        },
+        isDlpBlocked: false
+    })
   }
 
   function isInputableElement() {
