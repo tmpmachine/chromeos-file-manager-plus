@@ -1,0 +1,17 @@
+{
+  "name": "ChromeOS File Manager Plus",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "description": "Improve File Manager first letter navigation.",
+  "content_scripts": [
+    {
+      "matches": [
+        "chrome://file-manager/*"
+      ],
+      "js": [
+        "inject.js"
+      ],
+      "world": "MAIN"
+    }
+  ]
+}
