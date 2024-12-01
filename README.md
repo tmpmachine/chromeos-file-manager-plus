@@ -1,6 +1,9 @@
 # chromeos-file-manager-plus
 Chrome extension to improve ChromeOS File Manager first letter navigation.
 
+Added keyboard shortcut:
+- Alt+. : Open current directory in Terminal.
+
 > WARNING!
 > This extension require access to `chrome://file-manager` URL.
 
