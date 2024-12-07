@@ -2,7 +2,8 @@
 Chrome extension to improve ChromeOS File Manager first letter navigation.
 
 Added keyboard shortcut:
-- Alt+. : Open current directory in Terminal.
+- Ctrl+Shift+T : Open current directory in Terminal.
+- BrowserForward : Open selected directory (useful for navigating in Open dialog).
 
 > WARNING!
 > This extension require access to `chrome://file-manager` URL.
