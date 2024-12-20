@@ -95,6 +95,7 @@
       activeElement.tagName === 'INPUT' ||
       activeElement.tagName === 'TEXTAREA' ||
       activeElement.tagName === 'SELECT' ||
+      activeElement.tagName === 'CR-INPUT' ||
       activeElement.isContentEditable
     );
   }
